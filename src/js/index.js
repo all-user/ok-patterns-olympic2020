@@ -1,8 +1,20 @@
+// @flow
+import type {
+  OKPatternsDefinition,
+  OKBlockOptions,
+  OKBlockConstructorOptions,
+  OKPatternsFormationTable,
+  OKPatternsTransitionProps
+} from '@all-user/ok-blocks';
+import {
+  OKBlock
+} from '@all-user/ok-blocks';
+
 /*
  * default options
  */
 
-const _DEFAULT_OPTIONS = {
+const _DEFAULT_OPTIONS: OKBlockOptions = {
   displayTime: 1500,
   duration:    1000,
   loop:        false,
@@ -63,7 +75,7 @@ const _BL     = 'part blank';
 /*
  * Formation settings of all characters.
  */
-let _formationTable = {
+let _formationTable: OKPatternsFormationTable = {
   'a': [
     _G_R180, _P1,     _G_R270,
     _S_R0,   _C_S,    _S_R90,
@@ -290,14 +302,15 @@ let _formationTable = {
 /*
  * Transition settings.
  */
-const _TRANSITION_PROPS = [
+const _TRANSITION_PROPS: OKPatternsTransitionProps = [
   'top',
   'left',
   'background-color',
   'border-radius'
 ];
 
-module.exports = OKBlock => {
-  OKBlock.define('Olympic2020', { _DEFAULT_OPTIONS, _BASE_DOM, _TRANSITION_PROPS, _formationTable });
-  return OKBlock;
+module.exports = (OKBlockBase: Class<OKBlock>) => {
+  const definition: OKPatternsDefinition = {  _DEFAULT_OPTIONS, _BASE_DOM, _TRANSITION_PROPS, _formationTable };
+  OKBlockBase.define('Olympic2020', definition);
+  return class extends OKBlockBase {};
 };
