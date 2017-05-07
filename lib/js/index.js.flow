@@ -1,6 +1,7 @@
 // @flow
 
-import {OKBlock} from "@all-user/ok-blocks";
+import { OKBlock } from '@all-user/ok-blocks';
+import type { OKBlockClass } from "@all-user/ok-patterns-olympic2020.types";
 // import type {OKPatternsDefinition, OKBlockOptions, OKBlockConstructorOptions, OKPatternsFormationTable, OKPatternsTransitionProps} from "@all-user/ok-blocks";
 // declare class Class1 extends Element<> {
 //
@@ -148,4 +149,4 @@ declare class ExtendedByOlympic2020Pattern extends OKBlock {
 
 }
 
-declare module.exports: (OKBlockBase: Class<OKBlock>) => ExtendedByOlympic2020Pattern;
+declare module.exports: (OKBlockBase: OKBlockClass) => ExtendedByOlympic2020Pattern;
