@@ -310,7 +310,8 @@ const _TRANSITION_PROPS: OKPatternsTransitionProps = [
 ];
 
 module.exports = (OKBlockBase: Class<OKBlock>) => {
-  const definition: OKPatternsDefinition = {  _DEFAULT_OPTIONS, _BASE_DOM, _TRANSITION_PROPS, _formationTable };
+  class ExtendedByOlympic2020Pattern extends OKBlockBase {}
+  const definition: OKPatternsDefinition = {  _DEFAULT_OPTIONS, _BASE_DOM, _TRANSITION_PROPS, _formationTable, _Class: ExtendedByOlympic2020Pattern };
   OKBlockBase.define('Olympic2020', definition);
   return class extends OKBlockBase {};
 };

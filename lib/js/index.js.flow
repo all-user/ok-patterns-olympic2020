@@ -109,10 +109,10 @@ import {OKBlock} from "@all-user/ok-blocks";
 // }
 // declare interface Class4 extends Class3 {
 //
-//   patternName: ?string;
+//   pattern: ?string;
 // }
 // declare class Class0 {
-//   static patterns: {[patternName: string]: Class2};
+//   static patterns: {[pattern: string]: Class2};
 //   static define(name: string, patternDefinition: Class2): void;
 //
 //   _displayTime: number;
@@ -133,7 +133,7 @@ import {OKBlock} from "@all-user/ok-blocks";
 //   loop: boolean;
 //   options: {displayTime: number, distinct: boolean, duration: number, easing: string, loop: boolean, random: boolean, size: number};
 //   patternDefinition: Class2;
-//   patternName: string;
+//   pattern: string;
 //   random: boolean;
 //   resumeAnimate: ?Function;
 //   size: number;
