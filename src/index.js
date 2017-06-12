@@ -2,13 +2,10 @@
 import type {
   OKPatternsDefinition,
   OKBlockOptions,
-  OKBlockConstructorOptions,
   OKPatternsFormationTable,
-  OKPatternsTransitionProps
+  OKPatternsTransitionProps,
+  OKBlock
 } from '@all-user/ok-blocks';
-import type {
-  OKBlockClass
-} from '@all-user/ok-patterns-olympic2020.types';
 
 /*
  * default options
@@ -309,9 +306,9 @@ const _TRANSITION_PROPS: OKPatternsTransitionProps = [
   'border-radius'
 ];
 
-module.exports = (OKBlockBase: OKBlockClass) => {
-  class ExtendedByOlympic2020Pattern extends OKBlockBase {}
+module.exports = (OKBlock: Class<OKBlock>) => {
+  class ExtendedByOlympic2020Pattern extends OKBlock {}
   const definition: OKPatternsDefinition = {  _DEFAULT_OPTIONS, _BASE_DOM, _TRANSITION_PROPS, _formationTable, _Class: ExtendedByOlympic2020Pattern };
-  OKBlockBase.define('Olympic2020', definition);
-  return class extends OKBlockBase {};
+  OKBlock.define('Olympic2020', definition);
+  return class extends OKBlock {};
 };
