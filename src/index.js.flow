@@ -1,0 +1,5 @@
+// @flow
+
+declare class ExtendedByOlympic2020Pattern {}
+
+declare module.exports: <T>(OKBlock: Class<T>) => Class<ExtendedByOlympic2020Pattern & T>;

@@ -1,5 +1,0 @@
-// @flow
-
-import { OKBlock } from '@all-user/ok-blocks';
-
-export type OKBlockClass = Class<OKBlock>;
