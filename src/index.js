@@ -306,7 +306,7 @@ const _TRANSITION_PROPS: OKPatternsTransitionProps = [
   'border-radius'
 ];
 
-module.exports = (OKBlock: Class<OKBlock>) => {
+module.exports = (OKBlock: Class<OKBlock>): Class<OKBlock> => {
   class ExtendedByOlympic2020Pattern extends OKBlock {}
   const definition: OKPatternsDefinition = {  _DEFAULT_OPTIONS, _BASE_DOM, _TRANSITION_PROPS, _formationTable, _Class: ExtendedByOlympic2020Pattern };
   OKBlock.define('Olympic2020', definition);
