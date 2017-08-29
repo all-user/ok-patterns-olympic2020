@@ -1,5 +1,10 @@
 // @flow
 
-declare class ExtendedByOlympic2020Pattern {}
+import type { OKBlock } from '@all-user/ok-blocks';
 
-declare module.exports: <T>(OKBlock: Class<T>) => Class<ExtendedByOlympic2020Pattern & T>;
+declare class Olympic2020Pattern {}
+
+export type ExtendedByOlympic2020Pattern<T> = Olympic2020Pattern & T;
+export type ExtendedByOlympic2020PatternClass<T> = Class<Olympic2020Pattern> & T;
+
+declare export default <T: Class<OKBlock>>(OKBlockClass: T) => ExtendedByOlympic2020PatternClass<T>;
